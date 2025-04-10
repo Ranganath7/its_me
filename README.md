@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Responsive Achievements</title>
+  <title>Responsive Achievements</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
   <style>
+    /* Global Styles */
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -40,7 +41,6 @@
     }
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       padding: 20px;
       max-width: 1200px;
@@ -82,6 +82,46 @@
     footer p {
       margin: 0;
     }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .container {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        padding: 15px;
+      }
+      .card h2 {
+        font-size: 1.3rem;
+      }
+      .card p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+      }
+      .card img {
+        max-width: 200px;
+      }
+      .card h2 {
+        font-size: 1.2rem;
+      }
+      .card p {
+        font-size: 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -90,21 +130,23 @@
   </header>
   <section class="hero">
     <h2>Welcome to My Achievements</h2>
-    <p>Explore the milestones that define my journey.</p>
+    <p>Explore milestones that define my journey.</p>
   </section>
   <div class="container" id="achievement-container">
-    <!-- JavaScript dynamically adds cards here -->
+    <!-- Cards dynamically generated via JavaScript -->
   </div>
   <footer>
     <p>&copy; 2025 My Responsive Achievements</p>
   </footer>
   <script>
+    // Achievement Data
     const achievements = [
-      { title: "Milestone 1", description: "Description of achievement 1", image: "path-to-image1.jpg" },
-      { title: "Milestone 2", description: "Description of achievement 2", image: "path-to-image2.jpg" },
-      { title: "Milestone 3", description: "Description of achievement 3", image: "path-to-image3.jpg" }
+      { title: "Milestone 1", description: "Description of milestone 1", image: "path-to-image1.jpg" },
+      { title: "Milestone 2", description: "Description of milestone 2", image: "path-to-image2.jpg" },
+      { title: "Milestone 3", description: "Description of milestone 3", image: "path-to-image3.jpg" }
     ];
 
+    // Dynamically Populate Cards
     const container = document.getElementById('achievement-container');
     achievements.forEach(achievement => {
       const card = document.createElement('div');
