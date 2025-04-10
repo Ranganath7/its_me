@@ -41,6 +41,7 @@
     }
     .container {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid for side-by-side */
       gap: 20px;
       padding: 20px;
       max-width: 1200px;
@@ -92,7 +93,7 @@
         font-size: 1rem;
       }
       .container {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Adjust columns for smaller screens */
         padding: 15px;
       }
       .card h2 {
@@ -108,7 +109,7 @@
         font-size: 1.5rem;
       }
       .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for very small devices */
         gap: 15px;
         padding: 10px;
       }
@@ -133,7 +134,7 @@
     <p>Explore milestones that define my journey.</p>
   </section>
   <div class="container" id="achievement-container">
-    <!-- Cards dynamically generated via JavaScript -->
+    <!-- Cards dynamically added via JavaScript -->
   </div>
   <footer>
     <p>&copy; 2025 My Responsive Achievements</p>
@@ -161,3 +162,4 @@
   </script>
 </body>
 </html>
+
