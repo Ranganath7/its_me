@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
   <title>My Achievements</title>
   <style>
     * {
@@ -11,10 +11,12 @@
       padding: 0;
     }
 
-    body {
+    html, body {
       background-color: #111;
       color: white;
       font-family: Arial, sans-serif;
+      overflow-x: hidden; /* ✅ prevents horizontal scrolling */
+      width: 100%;
     }
 
     header {
@@ -57,7 +59,7 @@
       background-color: #1e1e1e;
       border-radius: 15px;
       padding: 20px;
-      flex: 1 1 300px; /* 👈 THIS allows wrapping + flexible growth */
+      flex: 1 1 300px;
       max-width: 300px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       text-align: center;
@@ -96,7 +98,7 @@
       }
     }
 
-    /* Phone */
+    /* Mobile */
     @media (max-width: 480px) {
       header h1 {
         font-size: 1.4rem;
@@ -107,6 +109,14 @@
       .container {
         padding: 10px;
         gap: 15px;
+      }
+      .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .card img {
+        max-width: 100%;
+        height: auto;
       }
       .card h2 {
         font-size: 1.1rem;
