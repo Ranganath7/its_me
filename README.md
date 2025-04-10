@@ -15,7 +15,6 @@
       background-color: #111;
       color: white;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
     }
 
     header {
@@ -47,15 +46,19 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: flex-start;
       gap: 20px;
-      padding: 30px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
     }
 
     .card {
       background-color: #1e1e1e;
       border-radius: 15px;
       padding: 20px;
-      width: 300px;
+      flex: 1 1 300px; /* 👈 THIS allows wrapping + flexible growth */
+      max-width: 300px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       text-align: center;
       transition: transform 0.2s ease;
@@ -91,15 +94,6 @@
       .hero p {
         font-size: 1rem;
       }
-      .card {
-        width: 100%;
-      }
-      .card h2 {
-        font-size: 1.2rem;
-      }
-      .card p {
-        font-size: 0.9rem;
-      }
     }
 
     /* Phone */
@@ -113,10 +107,6 @@
       .container {
         padding: 10px;
         gap: 15px;
-      }
-      .card img {
-        max-width: 180px;
-        height: auto;
       }
       .card h2 {
         font-size: 1.1rem;
