@@ -150,11 +150,11 @@
   </footer>
   <script>
     // Achievement Data
-    const achievements = 
+const achievements = 
 [
-  { title: "Milestone 1", description: "Description of milestone 1", image: "path-to-image1.jpg" },
-  { title: "Milestone 2", description: "Description of milestone 2", image: "path-to-image2.jpg" },
-  { title: "Milestone 3", description: "Description of milestone 3", image: "path-to-image3.jpg" }
+{ title: "Milestone 1", description: "Description of milestone 1", image: "path-to-image1.jpg" },
+{ title: "Milestone 2", description: "Description of milestone 2", image: "path-to-image2.jpg" },
+{ title: "Milestone 3", description: "Description of milestone 3", image: "path-to-image3.jpg" }
 ];
 
     // Dynamically Populate Cards
