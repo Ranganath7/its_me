@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Achievements</title>
   <style>
     * {
@@ -15,8 +15,7 @@
       background-color: #111;
       color: white;
       font-family: Arial, sans-serif;
-      overflow-x: hidden; /* ✅ prevents horizontal scrolling */
-      width: 100%;
+      overflow-x: hidden;
     }
 
     header {
@@ -59,8 +58,7 @@
       background-color: #1e1e1e;
       border-radius: 15px;
       padding: 20px;
-      flex: 1 1 300px;
-      max-width: 300px;
+      width: 300px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       text-align: center;
       transition: transform 0.2s ease;
@@ -88,41 +86,55 @@
       transform: scale(1.03);
     }
 
-    /* Tablet */
+    /* Tablet and below: stack cards vertically */
     @media (max-width: 768px) {
       .hero h2 {
         font-size: 1.8rem;
       }
+
       .hero p {
         font-size: 1rem;
       }
+
+      .card {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
     }
 
-    /* Mobile */
+    /* Phone: further size adjustments */
     @media (max-width: 480px) {
       header h1 {
         font-size: 1.4rem;
       }
+
       .hero h2 {
         font-size: 1.6rem;
       }
+
       .container {
         padding: 10px;
         gap: 15px;
       }
-      .card {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-      .card img {
-        max-width: 100%;
-        height: auto;
-      }
+
       .card h2 {
         font-size: 1.1rem;
       }
+
       .card p {
         font-size: 0.85rem;
+      }
+
+      .card img {
+        height: auto;
       }
     }
   </style>
