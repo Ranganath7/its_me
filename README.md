@@ -1,94 +1,86 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Achievements</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Achievements</title>
   <style>
-    /* Global Styles */
     * {
       box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #121212;
-      color: #ffffff;
     }
+
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
     header {
-      position: sticky;
-      top: 0;
-      background: #1a1a1a;
-      padding: 12px 20px;
       text-align: center;
-      z-index: 10;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      padding: 20px;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 1.8rem;
+      font-size: 2.5rem;
     }
+
     .hero {
       text-align: center;
-      background: linear-gradient(135deg, #6200ea, #00bcd4);
+      background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
       padding: 40px 20px;
     }
+
     .hero h2 {
       font-size: 2.2rem;
-      margin: 0 0 10px;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      margin: 0;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .card {
-      background: #1f1f1f;
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-    .card:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-      max-width: 240px;
-      border-radius: 10px;
-      margin: 0 auto 15px;
-      display: block;
-      object-fit: cover;
-    }
-    .card h2 {
-      font-size: 1.4rem;
       margin-bottom: 10px;
     }
-    .card p {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      margin: 0;
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ddd;
     }
-    footer {
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       text-align: center;
-      background: #1a1a1a;
-      padding: 15px;
-      color: #999999;
-      margin-top: 30px;
+      transition: transform 0.2s ease;
     }
-    footer p {
-      margin: 0;
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
     }
 
     /* Tablet */
@@ -98,6 +90,9 @@
       }
       .hero p {
         font-size: 1rem;
+      }
+      .card {
+        width: 100%;
       }
       .card h2 {
         font-size: 1.2rem;
@@ -121,6 +116,7 @@
       }
       .card img {
         max-width: 180px;
+        height: auto;
       }
       .card h2 {
         font-size: 1.1rem;
@@ -132,39 +128,35 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>My Achievements</h1>
+    <hr />
   </header>
+
   <section class="hero">
     <h2>Welcome to My Achievements</h2>
     <p>Explore milestones that define my journey.</p>
+    <hr />
   </section>
-  <div class="container" id="achievement-container">
-    <!-- Cards dynamically generated via JavaScript -->
-  </div>
-  <footer>
-    <p>&copy; 2025 My Responsive Achievements</p>
-  </footer>
 
-  <script>
-    // Achievement Data
-    const achievements = [
-      { title: "Milestone 1", description: "Description of milestone 1", image: "https://via.placeholder.com/300x200" },
-      { title: "Milestone 2", description: "Description of milestone 2", image: "https://via.placeholder.com/300x200" },
-      { title: "Milestone 3", description: "Description of milestone 3", image: "https://via.placeholder.com/300x200" }
-    ];
+  <section class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Milestone+1" alt="Milestone 1" />
+      <h2>Milestone 1</h2>
+      <p>Description of milestone 1</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Milestone+2" alt="Milestone 2" />
+      <h2>Milestone 2</h2>
+      <p>Description of milestone 2</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Milestone+3" alt="Milestone 3" />
+      <h2>Milestone 3</h2>
+      <p>Description of milestone 3</p>
+    </div>
+  </section>
 
-    const container = document.getElementById('achievement-container');
-    achievements.forEach(({ title, description, image }) => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <img src="${image}" alt="${title || 'Achievement Image'}">
-        <h2>${title}</h2>
-        <p>${description}</p>
-      `;
-      container.appendChild(card);
-    });
-  </script>
 </body>
 </html>
