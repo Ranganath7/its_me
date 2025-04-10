@@ -41,7 +41,7 @@
     }
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid for side-by-side */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
       max-width: 1200px;
@@ -61,7 +61,7 @@
     }
     .card img {
       width: 100%;
-      max-width: 260px;
+      max-width: 240px;
       border-radius: 10px;
       margin: 0 auto 15px;
     }
@@ -84,7 +84,7 @@
       margin: 0;
     }
 
-    /* Responsive Styles */
+    /* Mobile and Tablet Responsiveness */
     @media (max-width: 1024px) {
       .hero h2 {
         font-size: 2rem;
@@ -93,18 +93,21 @@
         font-size: 1rem;
       }
       .container {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Adjust grid for tablets */
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Adjust for tablets */
         padding: 15px;
-      }
-      .card h2 {
-        font-size: 1.4rem;
       }
     }
 
     @media (max-width: 768px) {
       .container {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust for smaller tablets */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller columns for phones */
         gap: 15px;
+      }
+      .card img {
+        max-width: 180px; /* Reduce image size */
+      }
+      .card h2 {
+        font-size: 1.3rem;
       }
       .card p {
         font-size: 0.9rem;
@@ -116,11 +119,11 @@
         font-size: 1.5rem;
       }
       .container {
-        grid-template-columns: 1fr; /* Single column for mobile devices */
+        grid-template-columns: 1fr; /* Single column for very small devices */
         padding: 10px;
       }
       .card img {
-        max-width: 200px;
+        max-width: 160px; /* Shrink images further */
       }
       .card h2 {
         font-size: 1.2rem;
@@ -168,5 +171,3 @@
   </script>
 </body>
 </html>
-
-
